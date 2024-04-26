@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "219002192696",
+    "project_id": "wallify-66b29",
+    "storage_bucket": "wallify-66b29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219002192696:android:3c903e5d17c15d1fe7f7cd",
+        "android_client_info": {
+          "package_name": "com.example.wallpaper_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWyI1MQfKyW3uEobhMCo5I8orYyr6xdxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
