@@ -32,7 +32,7 @@ class _AddWallpaperState extends State<AddWallpaper> {
     if (selectedImage != null) {
       String addId = randomAlphaNumeric(10);
       Reference firebaseStorageRef =
-          FirebaseStorage.instance.ref().child("blogImage").child(addId);
+      FirebaseStorage.instance.ref().child("blogImage").child(addId);
 
       final UploadTask task = firebaseStorageRef.putFile(selectedImage!);
       var downloadUrl = await(await task).ref.getDownloadURL();
@@ -42,18 +42,23 @@ class _AddWallpaperState extends State<AddWallpaper> {
         "Id" : addId,
       };
       await DatabaseMethods().addWallpaper(addItem, addId, value!).then((value) {
-          Fluttertoast.showToast(
-              msg: "Wallpaper has been Added Sucsessfully !!!",
-              toastLength: Toast.LENGTH_LONG,
-              gravity: ToastGravity.BOTTOM,
-              timeInSecForIosWeb: 1,
-              backgroundColor: Colors.green,
-              textColor: Colors.white,
-              fontSize: 16.0
-          );
+        Fluttertoast.showToast(
+            msg: "Wallpaper has been Added Successfully !!!",
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.green,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
+        // Reset selectedImage to null to prepare for adding another item
+        setState(() {
+          selectedImage = null;
         });
+      });
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
