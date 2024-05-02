@@ -115,7 +115,7 @@ class _SignUpState extends State<SignUp> {
                       registration();
                     },
                     child: Material(
-                      elevation: 8,
+                      elevation: 5,
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
                         padding: EdgeInsets.only(left: 20, right: 20),
